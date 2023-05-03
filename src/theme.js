@@ -193,7 +193,7 @@ export const themeSettings = (mode) => {
   };
 };
 
-// context for color mode
+// create context for easy access to condition of dark or light mode 
 export const ColorModeContext = createContext({
   toggleColorMode: () => {},
 });
@@ -203,12 +203,15 @@ export const useMode = () => {
 
   const colorMode = useMemo(
     () => ({
+      // function to change color mode 
       toggleColorMode: () =>
         setMode((prev) => (prev === "light" ? "dark" : "light")),
     }),
     []
   );
 
+  //gives object depending on light or dark mode
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+
   return [theme, colorMode];
 };
