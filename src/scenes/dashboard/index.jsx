@@ -19,10 +19,7 @@ const Dashboard = () => {
   return (
     <Box>
       <LoadScript googleMapsApiKey="AIzaSyCzO6Fxi3JJdhu5jBl5VsgrPV473-8Rw7M">
-        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
-          {/* Child components, such as markers, info windows, etc. */}
-          <></>
-        </GoogleMap>
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}/>
       </LoadScript>
     </Box>
   );
