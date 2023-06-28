@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   return (
     <Box>
-      <LoadScript googleMapsApiKey="AIzaSyCzO6Fxi3JJdhu5jBl5VsgrPV473-8Rw7M">
+      <LoadScript googleMapsApiKey="YOUR_API_KEY">
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
           {locations.map((location, index) => (
             <Marker key={index} position={{ lat: Number(location.lat), lng: Number(location.lng) }} />
