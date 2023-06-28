@@ -16,7 +16,10 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
-import SkateboardingIcon from '@mui/icons-material/Skateboarding';
+import SkateboardingIcon from "@mui/icons-material/Skateboarding";
+import StairsIcon from "@mui/icons-material/Stairs";
+import SquareFootIcon from '@mui/icons-material/SquareFoot';
+import HorizontalSplitIcon from '@mui/icons-material/HorizontalSplit';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -81,7 +84,7 @@ const Sidebar = () => {
                 ml="15px"
               >
                 <Typography variant="h3" color={colors.grey[100]}>
-                  SkateMapper               <SkateboardingIcon />
+                  SkateMapper <SkateboardingIcon />
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
@@ -110,7 +113,7 @@ const Sidebar = () => {
 
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
-              title="Dashboard"
+              title="Home"
               to="/"
               icon={<HomeOutlinedIcon />}
               selected={selected}
@@ -122,7 +125,46 @@ const Sidebar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              Data
+              Spots
+            </Typography>
+
+            {/* change below */}
+            <Item
+              title="Skateparks"
+              to="/"
+              icon={<SkateboardingIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Stairs"
+              to="/"
+              icon={<StairsIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Rails"
+              to="/"
+              icon={<SquareFootIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Ledges"
+              to="/"
+              icon={<HorizontalSplitIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            {/* change above */}
+
+            <Typography
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: "15px 0 5px 20px" }}
+            >
+              Pages
             </Typography>
             <Item
               title="Team"
@@ -138,22 +180,14 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-            <Item
+            {/* <Item
               title="Invoices"
               to="/invoices"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
-
-            <Typography
-              variant="h6"
-              color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
-            >
-              Pages
-            </Typography>
-            <Item
+            /> */}
+                        <Item
               title="Profile Form"
               to="/form"
               icon={<PersonOutlinedIcon />}
@@ -161,7 +195,7 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Calendar"
+              title="Event Calendar"
               to="/calendar"
               icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
