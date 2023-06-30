@@ -15,10 +15,10 @@ const center = {
 };
 
 const locations = [
-  { lat: 41.8687, lng: -87.6226 }, // Grant
-  { lat: 41.9667, lng: -87.64608 }, // Wilson
-  { lat: 41.8353, lng: -87.6073 }, // Burnham
-  { lat: 41.92863, lng: -87.68899 } // Logan 
+  { lat: 41.8687, lng: -87.6226 },
+  { lat: 41.9667, lng: -87.64608 },
+  { lat: 41.8353, lng: -87.6073 },
+  { lat: 41.92863, lng: -87.68899 },
 ];
 
 const Dashboard = () => {
@@ -27,8 +27,8 @@ const Dashboard = () => {
 
   return (
     <Box>
-      <LoadScript googleMapsApiKey="YOUR_API_KEY">
-        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
+      <LoadScript googleMapsApiKey="AIzaSyAHyZh4N32RsR4BQck4CyTXc2Knevf7bAY">
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={12}>
           {locations.map((location, index) => (
             <Marker key={index} position={{ lat: Number(location.lat), lng: Number(location.lng) }} />
           ))}

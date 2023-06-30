@@ -1,3 +1,3 @@
-## React Admin Dashboard
+## SkateMapper
 
-A template for an admin dashboard made with React.
+An app that allows users to find skateparks and skate spots.
